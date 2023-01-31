@@ -33,6 +33,9 @@ def test_executable():
 # --------------------------------------------------
 def test_usage():
     """usage"""
+test = get_args()
+print(test)
+    assert getstatusoutput(f'{prg} {test}')[0] == 0
 
     for flag in ['-h', '--help']:
         rv, out = getstatusoutput(f'{prg} {flag}')
