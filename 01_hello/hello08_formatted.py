@@ -15,7 +15,6 @@ def get_args():
     parser.add_argument('-n', '--name', default='World', help='Name to greet')
     return parser.parse_args()
 
-
 # --------------------------------------------------
 def main():
     """Make a jazz noise here"""

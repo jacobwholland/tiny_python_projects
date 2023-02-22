@@ -3,6 +3,7 @@
 
 import os
 from subprocess import getstatusoutput, getoutput
+from typing import get_args
 
 prg = './hello.py'
 
@@ -33,9 +34,6 @@ def test_executable():
 # --------------------------------------------------
 def test_usage():
     """usage"""
-    test = get_args()
-    print(test)
-    assert getstatusoutput(f'{prg} {test}')[0] == 0
 
     for flag in ['-h', '--help']:
         rv, out = getstatusoutput(f'{prg} {flag}')

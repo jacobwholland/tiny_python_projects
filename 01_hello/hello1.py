@@ -7,6 +7,8 @@ Purpose: Rock the Casbah
 
 import argparse
 
+import parser
+
 
 # --------------------------------------------------
 def get_args():
@@ -17,14 +19,12 @@ def get_args():
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
 
-    parser.add_argument('-n',
+  parser.add_argument('-n',
                         '--name',
                         help='name to greet',
                         metavar='name',
                         type=str,
                         default='Everyone')
-
-
 
     return parser.parse_args()
 
@@ -36,8 +36,6 @@ def main():
     args = get_args()
     person = args.name
     print(f'Hello, {person}!')
-
-
 # --------------------------------------------------
 if __name__ == '__main__':
     main()
